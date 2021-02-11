@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<title>Email signature generator</title>
+<link rel="stylesheet" href="index.css" />
+</head>
+<body>
+<form>
+  <label>Enter your name*:</label>
+  <br>
+  <input class="name-entered required-input capitalize-first-letters" placeholder="First, Last">
+  <br>
+  <label>Enter your title*:</label>
+  <br>
+  <input class="title-entered required-input capitalize-first-letters">
+  <br>
+  <label>Enter your phone number:</label>
+  <br>
+  <input class="phone-entered" maxlength="10" placeholder="5555555555">
+  <br>
+  <label>Enter your Fax number:</label>
+  <br>
+  <input class="fax-entered" maxlength="10" placeholder="5555555555">
+  <br>
+  <label>Enter your email address*:</label>
+  <br>
+  <input class="email-entered required-input" >
+  <strong> &nbsp;@yourcompany.com</strong><br>
+  <label>Enter link to profile picture (Must be an absolute link):</label>
+  <br>
+  <input class="profile-picture-entered" value="images/profile-picture-example.jpg">
+  <br>
+  <button class="create-signature-button" type="button">Click to make signature</button>
+</form>
+<div class="email-wrapper hidden">
+  <div id="full-email-signature">
+    <table>
+      <tr>
+        <td><img src="/" alt="Profile Picture" border="0" class="profile-pic" height="55" width="55" style="width:55px; height:55px; border-radius:5px;"></td>
+        <td>&nbsp;</td>
+        <td align="left" nowrap="nowrap" style="font-family: Helvetica, Arial, sans-serif; font-size: 1em; line-height: 16px; color: #44576f; margin-bottom: 7px;"><span style="font-weight: bold; text-transform:capitalize;" class="your-name">Your Name</span><br>
+          <span style="font-size: .85em; text-transform:capitalize;" class="your-title">Your Title</span><br>
+          <span style="color: #ff9e15; font-weight:bold; font-size:.6em;" class="letter-p">P </span> <span style="font-size:.6em"><span class="your-phone">267.555.5555</span> <span class="divider-line-one">|</span> <span style="color: #ff9e15; font-weight:bold;" class="letter-f">F </span><span class="your-fax">215.555.5555</span> <span class="divider-line-two">|</span> <span id="your-email">firstlastname@yourcompany.com</span></span></td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <td style="font-family: Helvetica, Arial, sans-serif; color: #44576f;"><strong>Business Name</strong></td>
+      </tr>
+      <tr>
+        <td style="font-size:.6em; font-family: Helvetica, Arial, sans-serif; color: #44576f; text-transform:capitalize;" id="address-location">Your Business Street | City, State Zip </td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <td><a href="#" target="_blank"><img src="images/twitter-es.jpg" width="35" height="35" style="width:30px; height:30px;" alt="Twitter" ></a></td>
+        <td><a href="#" target="_blank"><img src="images/facebook-es.jpg" width="35" height="35" style="width:30px; height:30px;" alt="Facebook" ></a></td>
+        <td><a href="#" target="_blank"><img src="images/linkedin-es.jpg" width="35" height="35" style="width:30px; height:30px;" alt="LinkedIn" ></a></td>
+        <td><a href="#" target="_blank"><img src="images/youtube-es.jpg" width="35" height="35" style="width:30px; height:30px;" alt="YouTube" ></a></td>
+      </tr>
+    </table>
+  </div>
+  <button class="copy-to-clipboard-button" >Copy to Clipboard</button>
+</div>
+<!-- <div class="email-signature-to-copy"></div> --> 
+<script src="index.js"></script>
+</body>
+</html>

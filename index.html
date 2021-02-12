@@ -1,36 +1,29 @@
 <!doctype html>
 <html>
 <head>
+<meta name="author" content="Thomas Cooper">
 <title>Email signature generator</title>
+<link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="index.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-<form>
+<form class="email-generator-form">
   <label>Enter your name*:</label>
-  <br>
   <input class="name-entered required-input capitalize-first-letters" placeholder="First, Last">
-  <br>
   <label>Enter your title*:</label>
-  <br>
   <input class="title-entered required-input capitalize-first-letters">
-  <br>
   <label>Enter your phone number:</label>
-  <br>
   <input class="phone-entered" maxlength="10" placeholder="5555555555">
-  <br>
-  <label>Enter your Fax number:</label>
-  <br>
+  <label>Enter your fax number:</label>
   <input class="fax-entered" maxlength="10" placeholder="5555555555">
-  <br>
   <label>Enter your email address*:</label>
-  <br>
-  <input class="email-entered required-input" >
-  <strong> &nbsp;@yourcompany.com</strong><br>
+  <div class="email-entered-wrapper"><input class="email-entered required-input" >
+  <em> &nbsp;@yourcompany.com</em></div>
   <label>Enter link to profile picture (Must be an absolute link):</label>
-  <br>
   <input class="profile-picture-entered" value="https://github.com/Tcooper920/emailSignatureGenerator/blob/main/images/profile-picture-example.jpg?raw=true">
-  <br>
-  <button class="create-signature-button" type="button">Click to make signature</button>
+  <button class="create-signature-button" type="button">Generate Email Signature</button>
 </form>
 <div class="email-wrapper hidden">
   <div id="full-email-signature">
@@ -62,7 +55,6 @@
   </div>
   <button class="copy-to-clipboard-button" >Copy to Clipboard</button>
 </div>
-<!-- <div class="email-signature-to-copy"></div> --> 
 <script src="index.js"></script>
 </body>
 </html>

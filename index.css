@@ -12,6 +12,10 @@ body {
 em {
 	color: #7b89a2;
 }
+:focus {
+	outline: none;
+	outline: 2px dotted #2b79d2;
+}
 /* Error color added with JavaSCript */
 .red {
 	border: 2px solid #FF5722 !important;
@@ -59,6 +63,10 @@ button {
 	padding: 1rem;
 	letter-spacing: .05rem;
 	border-bottom: 1px solid #236abb;
+	transition: background-color .5s;
+}
+button:hover {
+	background-color: #236abb;
 }
 .create-signature-button {
 	margin-top: 1rem;

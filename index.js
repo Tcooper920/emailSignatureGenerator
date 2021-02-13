@@ -1,3 +1,8 @@
+/* Focus on first input field in form */
+const firstTextField = document.getElementsByTagName("input")[0];
+
+firstTextField.focus();
+
 /* Function to get user data from fields */
 const getSignatureData = () => {
 

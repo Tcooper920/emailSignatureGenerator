@@ -3,6 +3,9 @@ const firstTextField = document.getElementsByTagName("input")[0];
 
 firstTextField.focus();
 
+/* Hiden error message */
+const errorMessage = document.getElementsByClassName("error-message")[0];
+
 /* Function to get user data from fields */
 const getSignatureData = () => {
 
@@ -75,6 +78,7 @@ createSignatureButton.addEventListener("click", () => {
     if (requiredInputFields[i].value.length < 1) {
       requiredInputFields[i].classList.add("red");
       if (i == requiredInputFieldsLength - 1) {
+        showErrorMessage();
         return false;
       }
     } else {
@@ -88,6 +92,16 @@ createSignatureButton.addEventListener("click", () => {
 
   emailSignatureToCopyWrapper.classList.remove("hidden");
 });
+
+/* Error message */
+const showErrorMessage = () => {
+  errorMessage.classList.add("display-error-message");
+
+  setTimeout(() => {
+    errorMessage.classList.remove("display-error-message");
+
+  }, 2500);
+}
 
 /* On button click, copy email signature to clipboard */
 let copyToClipBoardButton = document.getElementsByClassName("copy-to-clipboard-button")[0];

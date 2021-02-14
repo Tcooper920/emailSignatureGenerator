@@ -7,7 +7,6 @@ body {
 	background-color: #293038;
 	font-family: 'DM Sans', sans-serif;
 	font-size: 1rem;
-	padding: 1rem;
 }
 em {
 	color: #7b89a2;
@@ -28,6 +27,7 @@ em {
 	max-width: 25rem;
 	padding: 1.5rem;
 	margin: 2rem auto;
+	overflow-x: scroll;
 }
 .email-generator-form input {
 	height: 2rem;
@@ -80,5 +80,30 @@ button:hover {
 	margin: 1rem auto;
 }
 .hidden {
-  display: none;
+	display: none;
+}
+.error-message {
+	display: flex;
+	position: fixed;
+	z-index: 1;
+	top: -4rem;
+	background-color: #FF5722;
+	color: white;
+	width: 100%;
+	justify-content: center;
+	padding: .5rem 0 .5rem 0;
+	border-bottom: 1px solid #de5a5a;
+	transition: top .35s ease-in-out;
+}
+
+.display-error-message {
+	top: 0;
+}
+
+/* Media queries **********************************************************************/
+@media screen and (max-width: 480px) {
+	.email-generator-form, .email-wrapper {
+		margin: 2rem 1rem 2rem 1rem;
+		overflow-x: scroll;
+	}
 }
